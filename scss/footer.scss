@@ -1,0 +1,34 @@
+@import "./mixins.scss";
+footer{
+    @include grey-block;
+    @include flex-center;    
+    flex-direction: column;
+    border-radius: 0px;
+    padding: 0 11%;
+    position: relative;
+    .footer__info-group{
+        @include contact-info;
+        padding: 0px;
+        padding-top: 70px;           
+    }    
+    .footer__logo{        
+        padding-top: 75px;
+        @include logotype;
+        &::before{
+            content:"";
+            position: absolute;                                
+            height: 2px;
+            background: #303030;
+            width: 100%;            
+            left: 0;
+            bottom: 100px;
+        }        
+    }
+    p{
+        font-family: 'Helvetica Neue';        
+        font-size: 12px;
+        color: #737373;
+        padding: 12px 0px 30px;
+        text-align: center;
+    }   
+}

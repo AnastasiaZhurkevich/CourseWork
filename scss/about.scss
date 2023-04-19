@@ -1,0 +1,38 @@
+@import "./mixins.scss";
+.about {
+    @include grey-block;
+    &__header{
+        @include header-center;
+        height: 168px;
+        padding: 60px 0px 16px;
+        letter-spacing: 5px;
+        h3{
+            font-size: 30px;
+        }
+    }
+    p{
+        margin: 0 auto;
+        padding: 46px 240px 0px;
+        font-family: 'Helvetica Neue';
+        font-size: 16px;
+        line-height: 30px;
+        text-align: center;
+        color: #A6A6A6;
+    }
+    &__group{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 90px 0px;
+        &__imgs{
+            @include flex-center;
+            width: 62%;
+            flex-wrap: wrap;
+            gap: 4%;
+            div img{
+                @include img-all-block;
+            }
+        }
+    }
+}

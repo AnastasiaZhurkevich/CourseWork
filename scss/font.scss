@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'Helvetica Neue';
+    font-weight: normal;
+    font-style: normal;     
+    src: local('Helvetica Neue'), local('Helvetica-Neue'),
+        url('../font/HelveticaNeueCyr-Roman.woff2') format('woff2'),
+        url('../font/HelveticaNeueCyr-Roman.woff') format('woff'),
+        url('../font/HelveticaNeueCyr-Roman.ttf') format('ttf'),
+        url('../font/HelveticaNeueCyr-Roman.eot') format('eot');    
+}
+@font-face {
+    font-family: 'Helvetica Neue Bold';
+    font-weight: bold;
+    font-style: normal;     
+    src: local('Helvetica Neue Bold'), local('Helvetica-Neue-Bold'),
+        url('../font/HelveticaNeueCyr-Bold.woff2') format('woff2'),
+        url('../font/HelveticaNeueCyr-Bold.woff') format('woff'),
+        url('../font/HelveticaNeueCyr-Bold.ttf') format('ttf'),
+        url('../font/HelveticaNeueCyr-Bold.eot') format('eot'); 
+}
+@font-face {
+    font-family: 'Helvetica Neue Black';
+    font-weight: 900;
+    font-style: normal;     
+    src: local('Helvetica Neue Black'), local('Helvetica-Neue-Black'),
+        url('../font/HelveticaNeueCyr-Black.woff2') format('woff2'),
+        url('../font/HelveticaNeueCyr-Black.woff') format('woff'),
+        url('../font/HelveticaNeueCyr-Black.ttf') format('ttf'),
+        url('../font/HelveticaNeueCyr-Black.eot') format('eot'); 
+}

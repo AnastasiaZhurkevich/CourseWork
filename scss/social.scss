@@ -1,0 +1,85 @@
+@import "./mixins.scss";
+.social{
+    padding-bottom: 120px;
+    &__header{
+        @include header-center;
+        padding-top: 120px;
+        h3{
+            line-height: 90px;
+            letter-spacing: 6.24px;
+        }
+        ::after{
+            @include green-line;
+            inset: 130% 40.34% .67%;
+        }
+    }
+    &__info{
+        margin-top: 90px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2%;
+        &__item{
+            @include grey-block;
+            &__follow{
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                position: relative;
+                img {
+                    padding: 25px 20px 25px 25px;
+                }
+                h4{
+                    font-family: 'Helvetica Neue';
+                    font-size: 14px;
+                    line-height: 30px;
+                    color: #BFBFBF;
+                    padding: 30px 0px ;
+                }
+                .follow__btn-wrap{
+                    position: absolute;
+                    left: calc(100% - 125px);
+                    @include grey-button;
+                }                         
+            }            
+            &__text-group{
+                position: relative;
+                &::before{
+                    content:"";
+                    position: absolute;
+                    height: 2px;
+                    background: #303030;
+                    width: 100%;
+                    left: 0;
+                    top: 0;
+                }     
+                padding: 20px 40px 0px 30px;
+                h3{
+                    font-family: 'Helvetica Neue';
+                    font-size: 14px;
+                    line-height: 30px;
+                    color: #737373;
+                }
+                p{
+                    font-family: 'Helvetica Neue';
+                    font-size: 14px;
+                    line-height: 30px;
+                    color: rgba(255, 255, 255, 0.7);
+                }
+                .green-text{
+                    color: #34C759;
+                }
+            }
+            &__imgs-group{
+                display: flex;
+                flex-wrap: wrap;
+                div {
+                    width: 33.3%;
+                    img{
+                        @include img-all-block;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+}

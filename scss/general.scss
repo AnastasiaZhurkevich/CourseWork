@@ -1,0 +1,17 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    font-weight: normal;
+}
+.page{    
+    width: 100%;    
+    background-color: #1A1A1A;
+    background-image: url("../img/bg-img.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+section {
+    margin: 0 11%;
+}

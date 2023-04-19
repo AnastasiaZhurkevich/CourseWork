@@ -1,0 +1,53 @@
+@import "./mixins.scss";
+.work{
+    &__header{
+        @include header-center;
+        padding-top: 90px;
+        height: 168px;
+        letter-spacing: 2px;        
+        ::after{
+            @include green-line;
+        }
+    }
+    &__stages{        
+        display: grid;     
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));        
+        gap: 30px;
+        justify-items: center;        
+        padding: 90px 0px 0px;
+        div{ 
+            @include grey-block;
+            padding: 24px;            
+            min-height: 206px;
+            h5{
+                position: relative;
+                font-family: 'Helvetica Neue';                
+                font-size: 22px;
+                line-height: 26px;
+                letter-spacing: -0.275px;
+                color: #FFFFFF;
+                &::after{
+                    @include green-line;
+                    width: 56px;
+                    inset: 167% 0 .67%;
+                }   
+            }
+            p{
+                @include grey-text;
+                padding-top: 36px;
+            }
+        }
+        .active-stage{           
+            background: #34C759;
+            h5{
+               color: #191919;
+                &::after{                   
+                    background: #191919;                    
+                }   
+            }
+            p{
+                color: #191919;                
+            }
+        }
+    }
+}

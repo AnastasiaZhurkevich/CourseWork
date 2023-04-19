@@ -1,0 +1,122 @@
+@import "./mixins.scss";
+@media  screen and (max-width:1224px) {
+    section {
+        margin: 0 6%;
+    }
+}
+@media  screen and (max-width:1024px) {
+    .front{
+        padding: 40px;
+    }
+    .about p{
+        padding: 46px 120px 0px;
+    }
+    .work__stages div h5 {
+        font-size: 18px;
+    }
+    .social__info{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .social__info__item__text-group p {
+        padding-bottom: 30px;
+    }
+    
+    footer .footer__logo {        
+        padding-top: 110px;
+    }
+}
+@media  screen and (max-width:768px) {
+    header{
+        padding: 30px 0px 0px;
+        height: 92px;
+        flex-direction: column;
+        nav a{
+                line-height: 40px;
+                padding-left: 10px;
+                padding-right: 10px;                
+            }
+        .logo h5 {
+            letter-spacing: 0px;
+            padding-left: 3px;
+        }
+        
+    }
+    .front {
+        h2 {
+        letter-spacing: 4.2px; 
+        font-size: 45px;
+        line-height: 55px;
+        }
+        p{
+            width: auto;
+        }
+    }
+    .front__info-group {
+        gap: 35px;
+        padding: 33px 0 57px;
+    }
+    .about p {
+        padding: 23px 20px 0px;
+    }
+    .about__group {
+        padding: 30px 0;
+    }
+    .arrow-wrap{
+        display: none;
+    }
+    .recipes__info {
+        flex-wrap: wrap;        
+    }
+    .chefs__header h3 {
+        font-size: 31px;
+    }
+    .recipes__header h3 {        
+        font-size: 24px;
+    }
+    .social__info{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .footer__info-group {
+        gap: 35px;
+        padding: 33px 0 57px;
+    }
+}
+@media  screen and (max-width:480px) {
+    header nav a{
+            line-height: 30px;
+            padding-left: 10px;                
+        }    
+    .front {
+        padding: 25px;
+    }
+    .about__header, .work__header, .dishes__header, .chefs__header, 
+     .social__header {
+        @include header-center_480; 
+    }
+    .recipes__header {
+        @include header-center_480;     
+        font-size: 65px;
+    }
+    .work__stages {        
+        padding: 40px 0 0;
+    }
+    .recipes__info {
+        padding-top: 40px;
+    }
+    .dishes__group {
+        padding-top: 40px;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        &__item .footer-wrap {        
+            padding: 20px 8px 24px 8px;
+        }
+    }
+    .chefs__group__item .avatar-imgs {
+        justify-content: space-around;
+    }
+    .social__info {       
+        margin-top: 50px;
+    }
+    .social__header :after {       
+        inset: 180% 40.34% .67%;
+    }
+}

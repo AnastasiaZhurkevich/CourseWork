@@ -1,0 +1,71 @@
+@import "./mixins.scss";
+.dishes{
+    &__header{
+        @include header-center;
+        padding-top: 120px;
+        letter-spacing: 2px;
+        ::after{
+            @include green-line;
+        }
+    }
+    &__group{
+        padding-top: 90px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-template-rows: repeat(2, 1fr);
+        gap: 30px;
+        justify-items: center;
+        &__item{
+            @include grey-block;
+            position: relative;
+            .img-wrap{
+                img{
+                    @include img-all-block;
+                }
+                &::after{
+                    content:url("../icon/arrow.svg");
+                    display: block;
+                    position: absolute;
+                    top: 24px;
+                    left: calc(100% - 64px);
+                }
+            }
+            .text-wrap{
+                padding: 30px;
+                h5{
+                    font-family: 'Helvetica Neue';
+                    font-size: 32px;
+                    line-height: 30px;
+                    color: #D9D9D9;
+                }
+                .subtitle{
+                    font-family: 'Helvetica Neue';
+                    font-size: 12px;
+                    line-height: 16px;
+                    letter-spacing: -0.15px;
+                    color: #A4A8B2;
+                }
+                p{
+                    @include grey-text;
+                    padding-top: 20px;
+                }
+            }
+            .footer-wrap{
+                display:flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px 24px 24px 30px;
+                &__btn-wrap{
+                    @include grey-button;  
+                    .green-button{
+                        background: #34C759;
+                        border-radius: 30px; 
+                        color: #252525;
+                    }
+                }
+            }
+        }
+    }
+}
+
+

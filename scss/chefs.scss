@@ -1,0 +1,45 @@
+@import "./mixins.scss";
+.chefs{
+    &__header{
+        @include header-center;
+        padding-top: 120px;
+        ::after{
+            @include green-line;
+        }
+    }
+    &__group{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 30px;
+        padding-top: 45px;
+        &__item{
+            .avatar{
+                display: flex;
+                &__info{
+                    padding: 12px 0px 0px 24px;
+                   h4{
+                        font-family: 'Helvetica Neue';
+                        font-size: 18px;
+                        line-height: 21px;
+                        letter-spacing: -0.225px;
+                        color: #FFFFFF;
+                    }
+                    p{
+                        font-family: 'Helvetica Neue';
+                        font-size: 12px;
+                        line-height: 16px;
+                        letter-spacing: -0.15px;
+                        color: rgba(255, 255, 255, 0.5);
+                        padding-top: 6px;
+                    }
+                }
+            }
+            .avatar-imgs{
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                padding-top: 24px;
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+@import "./mixins.scss";
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 89px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    padding: 0 11%;
+    .logo{
+        @include logotype;
+    }
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        a {
+            display: block;
+            font-family: 'Helvetica Neue Bold';
+            font-size: 14px;
+            line-height: 90px;
+            color: #FFFFFF;
+            text-decoration: none;
+            padding-left: 50px;
+        }
+        .active-item{
+            color: #34C759;
+        }
+    }
+}

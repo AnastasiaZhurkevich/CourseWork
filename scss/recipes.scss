@@ -1,0 +1,114 @@
+@import "./mixins.scss";
+.recipes{
+    &__header{
+        @include header-center;
+        padding-top: 120px;
+        h3{
+            line-height: 90px;
+            letter-spacing: 6.24px;
+        }
+        ::after{
+            @include green-line;
+            inset: 135% 40.34% .67%;
+        }
+    }
+    &__info{
+        display: flex;
+        padding-top: 90px;
+        &__breakfast{
+            @include flex-center;
+            flex-direction: column;
+            position: relative;
+            background-image: url("../img/grill.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 1%;    
+            margin: 0 1.25% 0;
+            &::after{
+                content: url("../icon/left-arrow.svg");
+                position: absolute;
+                display: block;
+                width: 40px;
+                height: 40px;
+                top: 30px;
+                left: calc(100% - 85px);              
+            }            
+            .meal-title{
+                @include meal-block;
+                width: 90px;
+                margin-top: 60px;
+                padding: 0px;
+            }
+            p{
+                font-family: 'Helvetica Neue';
+                font-size: 14px;
+                line-height: 30px;
+                color: #FFFFFF;
+                padding-top: 65px;
+            }
+            .breakfast-author{
+                padding-top: 45px;
+            }
+            div{
+                font-family: 'Helvetica Neue';
+                font-size: 24px;
+                line-height: 40px;
+                text-align: center;
+                color: #FFFFFF;
+                padding: 30px 64px 0px;
+            }
+            .footer-wrap{
+                padding: 62px 0px;
+            }
+        }
+        &__others{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            div{                
+                padding: 30px 30px 25px 30px;
+                @include grey-block;
+                p{
+                    @include white-text;
+                }
+                div{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    padding: 0px;
+                    margin-top: 10px;
+                    box-shadow: none;
+                    background:none;
+                    div{
+                        margin-top: 0px;
+                        div{
+                            @include flex-center;
+                            @include meal-block;
+                            width: 65px;
+                            padding: 0px;
+                            margin-right: 15px;
+                        }
+                    }
+                } 
+            }
+            .salad-recipe{
+                background-image: url("../img/salad.png");
+                background-repeat: no-repeat;
+                background-size: cover; 
+            }
+            .active-item{
+                background: #34C759;
+                box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+                border-radius: 6px;                
+                p{
+                    color:#252525;
+                }
+                div div div{
+                    background: #000000;
+                }
+            }
+        } 
+    }
+}
